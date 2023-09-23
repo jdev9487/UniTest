@@ -1,0 +1,19 @@
+﻿namespace Core;
+
+public class ExampleClass : IExampleClass
+{
+    private readonly IFoo _foo;
+    private readonly IBar _bar;
+
+    public ExampleClass(IFoo foo, IBar bar)
+    {
+        _foo = foo;
+        _bar = bar;
+    }
+
+    public void DoStuff()
+    {
+        _foo.DoFoo();
+        _bar.DoBar();
+    }
+}
