@@ -1,16 +1,21 @@
-using Core;
-using Moq;
-
 namespace ExampleTest;
 
-public class Tests
+using Jdev.UniTest;
+using Moq;
+
+public class Tests : TestOf<ExampleClass>
 {
+    protected override void SetUp()
+    {
+        MockOf<IBar>()
+            .Setup(x => x.DoBar())
+            .Returns(1);
+    }
+    
     [Test]
     public void Test1()
     {
-        var asdf = new TestOf<ExampleClass>();
-        asdf.Cut.DoStuff();
-        asdf.MockOf<IFoo>()
-            .Verify(x => x.DoFoo(), Times.Once);
+        Cut.DoStuff();
+        MockOf<IFoo>().Verify(x => x.DoFoo(), Times.Once);
     }
 }

@@ -1,4 +1,4 @@
-namespace Core;
+namespace Jdev.UniTest;
 
 public interface IFoo
 {
