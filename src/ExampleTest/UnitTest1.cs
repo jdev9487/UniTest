@@ -11,7 +11,12 @@ public class Tests : TestOf<ExampleClass>
             .Setup(x => x.DoBar())
             .Returns(1);
     }
-    
+
+    protected override void TearDown()
+    {
+        throw new NotImplementedException();
+    }
+
     [Test]
     public void Test1()
     {
