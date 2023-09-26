@@ -1,6 +1,7 @@
 namespace ExampleTest;
 
 using Jdev.UniTest;
+using Jdev.UniTest.Extensions;
 using Moq;
 
 public class Tests : TestOf<ExampleClass>
@@ -21,6 +22,6 @@ public class Tests : TestOf<ExampleClass>
     public void Test1()
     {
         Cut.DoStuff();
-        MockOf<IFoo>().Verify(x => x.DoFoo(), Times.Once);
+        MockOf<IFoo>().Accepts<IFoo, Guid, int>(x => x.DoFoo, new Guid());
     }
 }

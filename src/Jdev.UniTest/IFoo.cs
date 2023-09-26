@@ -2,5 +2,5 @@ namespace Jdev.UniTest;
 
 public interface IFoo
 {
-    void DoFoo();
+    void DoFoo(Guid id, int length);
 }

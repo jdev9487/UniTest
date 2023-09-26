@@ -13,16 +13,10 @@ public class ExampleClass : IExampleClass
 
     public void DoStuff()
     {
-        _foo.DoFoo();
-        var x = _bar.DoBar();
+        _foo.DoFoo(new Guid(), 1);
     }
 
     public void DoOtherStuff()
     {
-        _foo.DoFoo();
-        _foo.DoFoo();
-        _foo.DoFoo();
-        _bar.DoBar();
-        _bar.DoBar();
     }
 }
