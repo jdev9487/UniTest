@@ -2,7 +2,6 @@ namespace ExampleTest;
 
 using Jdev.UniTest;
 using Jdev.UniTest.Extensions;
-using Moq;
 
 public class Tests : TestOf<ExampleClass>
 {
@@ -15,13 +14,12 @@ public class Tests : TestOf<ExampleClass>
 
     protected override void TearDown()
     {
-        throw new NotImplementedException();
     }
 
     [Test]
     public void Test1()
     {
-        Cut.DoStuff();
-        MockOf<IFoo>().Accepts<IFoo, Guid, int>(x => x.DoFoo, new Guid());
+        // Cut.DoStuff();
+        MockOf<IFoo>().WithMethod(x => x.DoFoo).IsGiven(new Guid());
     }
 }
