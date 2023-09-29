@@ -13,7 +13,8 @@ public class ExampleClass : IExampleClass
 
     public void DoStuff()
     {
-        _foo.DoFoo(new Guid(), 1);
+        var count = _bar.DoBar("hello");
+        _foo.DoFoo(new Guid(), count);
     }
 
     public void DoOtherStuff()

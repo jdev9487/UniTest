@@ -2,6 +2,8 @@ namespace Jdev.UniTest;
 
 using Moq;
 using Exceptions;
+using Extensions;
+using Models;
 using NUnit.Framework;
 
 public abstract class TestOf<TClass> where TClass : class
@@ -50,6 +52,24 @@ public abstract class TestOf<TClass> where TClass : class
         throw new MockNotFoundException(typeof(Mock<TDependency>));
     }
 
+    protected MockPromise<TDependency> VerifyThat<TDependency>(Func<TDependency, Delegate> func)
+        where TDependency : class
+    {
+        var mock = MockOf<TDependency>();
+        return new()
+        {
+            Mock = mock,
+            Promise = func(mock.Object)
+        };
+    }
+
+    protected object ResultFrom<TDependency>(Func<TDependency, Delegate> func)
+        where TDependency : class
+    {
+        var mock = MockOf<TDependency>();
+        return mock.GenericSetUp<TDependency, int>(func(mock.Object));
+    }
+    
     [SetUp]
     protected abstract void SetUp();
 
