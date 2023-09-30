@@ -16,8 +16,4 @@ public class ExampleClass : IExampleClass
         var count = _bar.DoBar("hello");
         _foo.DoFoo(new Guid(), count);
     }
-
-    public void DoOtherStuff()
-    {
-    }
 }

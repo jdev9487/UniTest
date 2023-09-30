@@ -1,7 +1,6 @@
 namespace ExampleTest;
 
 using Jdev.UniTest;
-using Jdev.UniTest.Extensions;
 
 public class Tests : TestOf<ExampleClass>
 {
@@ -12,9 +11,8 @@ public class Tests : TestOf<ExampleClass>
     [Test]
     public void Test1()
     {
-        Cut.DoStuff();
-        // var result = ResultFrom<IBar>(x => x.DoBar);
-        // MockOf<IFoo>().Setup(x => x.DoFoo(new Guid(), 1));
-        VerifyThat<IFoo>(x => x.DoFoo).IsGiven(ResultFrom<IBar>(y => y.DoBar));
+        VerifyThat<IFoo>(x => x.DoFoo)
+            .IsGiven(ResultFrom<IBar>(x => x.DoBar))
+            .During(() => Cut.DoStuff());
     }
 }
