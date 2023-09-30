@@ -17,6 +17,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\ExampleClass\ExampleClass.csproj" />
       <ProjectReference Include="..\Jdev.UniTest\Jdev.UniTest.csproj" />
     </ItemGroup>
 

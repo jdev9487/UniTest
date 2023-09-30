@@ -1,4 +1,4 @@
-namespace Jdev.UniTest;
+namespace ExampleClass;
 
 public interface IFoo
 {
