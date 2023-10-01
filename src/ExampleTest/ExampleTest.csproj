@@ -4,7 +4,6 @@
         <TargetFramework>net7.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-
         <IsPackable>false</IsPackable>
     </PropertyGroup>
 
@@ -17,7 +16,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\ExampleClass\ExampleClass.csproj" />
+      <ProjectReference Include="..\ExampleAssembly\ExampleAssembly.csproj" />
       <ProjectReference Include="..\Jdev.UniTest\Jdev.UniTest.csproj" />
     </ItemGroup>
 

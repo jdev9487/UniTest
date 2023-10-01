@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jdev.UniTest", "Jdev.UniTes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleTest", "ExampleTest\ExampleTest.csproj", "{4B92D4F2-4550-414A-A782-2A17F792FE1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleClass", "ExampleClass\ExampleClass.csproj", "{7F306033-71CB-4B1E-945D-A666058D074E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleAssembly", "ExampleAssembly\ExampleAssembly.csproj", "{7F306033-71CB-4B1E-945D-A666058D074E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -4,6 +4,11 @@
         <TargetFramework>net7.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <PackageId>Jdev.UniTest</PackageId>
+        <PackageTags>Unit testing;NUnit;Moq</PackageTags>
+        <Version>0.1.0</Version>
+        <Authors>John Gould</Authors>
+        <Product>UniTest</Product>
     </PropertyGroup>
 
     <ItemGroup>

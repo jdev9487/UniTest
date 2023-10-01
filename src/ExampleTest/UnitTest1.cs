@@ -1,6 +1,6 @@
 namespace ExampleTest;
 
-using ExampleClass;
+using ExampleAssembly;
 using Jdev.UniTest;
 
 public class Tests : TestOf<ExampleClass>
@@ -16,7 +16,7 @@ public class Tests : TestOf<ExampleClass>
     public void Test1()
     {
         VerifyThat<IFoo>(x => x.DoFoo)
-            .IsGiven(ResultFrom<IBar>(x => x.DoBar))
+            .IsGiven(ResultFrom<IBar, int>(x => x.DoBar))
             .During(() => Cut.DoStuff());
     }
 }

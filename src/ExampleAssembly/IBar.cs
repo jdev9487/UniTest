@@ -1,4 +1,4 @@
-namespace ExampleClass;
+namespace ExampleAssembly;
 
 public interface IBar
 {

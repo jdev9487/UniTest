@@ -1,9 +1,9 @@
 namespace Jdev.UniTest;
 
 using Moq;
+using Models;
 using Exceptions;
 using Extensions;
-using Models;
 using NUnit.Framework;
 
 public abstract class TestOf<TClass> where TClass : class
@@ -63,11 +63,11 @@ public abstract class TestOf<TClass> where TClass : class
         };
     }
 
-    protected object ResultFrom<TDependency>(Func<TDependency, Delegate> func)
+    protected object ResultFrom<TDependency, TReturn>(Func<TDependency, Delegate> func)
         where TDependency : class
     {
         var mock = MockOf<TDependency>();
-        return mock.GenericSetUp<TDependency, int>(func(mock.Object));
+        return mock.GenericSetUp<TDependency, TReturn>(func(mock.Object));
     }
     
     [SetUp]
